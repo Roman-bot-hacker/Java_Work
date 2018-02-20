@@ -1,10 +1,16 @@
 
 public class Sweets {
 
+	// Weight of sweets, which is available for a shop by default
 	private static final double DEF_WEIGHT = 1.0;
+
+	// Price per 1 KG of sweets by default
 	private static final double DEF_PRICE = 100.0;
+
+	// Number of sweets per 1 KG by default
 	private static final int DEF_NUMBER = 50;
 
+	// Summary price of sweets
 	private static double sumPrice = 0;
 
 	private int numberByKg;
@@ -17,7 +23,7 @@ public class Sweets {
 
 	private String producer;
 
-	Sweets() {
+	public Sweets() {
 		numberByKg = DEF_NUMBER;
 		name = "Name";
 		priceByKg = DEF_PRICE;
@@ -26,7 +32,7 @@ public class Sweets {
 		sumPrice += (priceByKg * availiableWeight);
 	}
 
-	Sweets(String name, int numberByKg, double priceByKg, String producer) {
+	public Sweets(String name, int numberByKg, double priceByKg, String producer) {
 		this.numberByKg = numberByKg;
 		this.name = name;
 		this.priceByKg = priceByKg;
@@ -35,7 +41,8 @@ public class Sweets {
 		sumPrice += (priceByKg * availiableWeight);
 	}
 
-	Sweets(String name, int numberByKg, double priceByKg, String producer, double availiableWeight) {
+	public Sweets(String name, int numberByKg, double priceByKg, String producer,
+			double availiableWeight) {
 		this.numberByKg = numberByKg;
 		this.name = name;
 		this.priceByKg = priceByKg;
@@ -89,10 +96,11 @@ public class Sweets {
 	}
 
 	public String toString() {
-		String out = "\nSweet " + name + ":\n" + "Number of sweets by 1 KG: " + numberByKg + "\n"
-				+ "Price by 1 KG of sweets (in UAH): " + priceByKg + "\n" + "Producer: " + producer + "\n"
-				+ "Weight of sweets, which are availiable in a shop: " + availiableWeight + "\n";
-		return out;
+		return "\nSweet " + name + ":\n" + "Number of sweets by 1 KG: " + numberByKg + "\n"
+				+ "Price by 1 KG of sweets (in UAH): " + priceByKg + "\n"
+				+ "Producer: " + producer + "\n"
+				+ "Weight of sweets, which are availiable in a shop: " 
+				+ availiableWeight + "\n";
 	}
 
 	public static void printStaticSum() {
@@ -103,7 +111,8 @@ public class Sweets {
 		System.out.println("\nSummury Weight of Sweets is " + Sweets.sumPrice);
 	}
 
-	public void resetValues(String name, int numberByKg, double priceByKg, String producer, double availiableWeight) {
+	public void resetValues(String name, int numberByKg, double priceByKg, 
+			String producer, double availiableWeight) {
 		sumPrice += (priceByKg * availiableWeight);
 		this.name = name;
 		this.numberByKg = numberByKg;
