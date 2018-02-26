@@ -31,6 +31,7 @@ public class ProcessText {
 	}
 	public void wordsInQuestion(String inputText, int wordLength) {
 		String pattern = "\\w+";
+		inputText = inputText.toLowerCase();
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(inputText);
 		while (m.find()) {

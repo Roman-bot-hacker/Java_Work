@@ -30,9 +30,8 @@ public class StringProcessor {
 	
 	public void showResult(LinkedList<String> resultList1, 
 							Set<String> resultList2) {
-		System.out.print(resultList2.size());
 		resultList1.forEach((word) -> System.out.println(word));
-		System.out.println("\n\n");
+		System.out.println();
 		resultList2.forEach((word) -> System.out.println(word));
 	}
 }

@@ -4,10 +4,14 @@ import java.io.IOException;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		ProcessText process = new ProcessText();
 		StringProcessor processor = new StringProcessor();
-		processor.processText("It is Ukraine! want want want what?", 'I', 4, process);
+		try {
+			processor.processText(processor.readInputText(), 'i', 4, process);
+		} catch (IOException e) {
+			System.out.println("You don't enter text we need!");
+		}
 		processor.showResult(process.getWordsResult(), process.getQuestionResult());
 	}
 
