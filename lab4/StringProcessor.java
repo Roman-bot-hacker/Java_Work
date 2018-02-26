@@ -10,13 +10,19 @@ import java.util.regex.Pattern;
 
 public class StringProcessor {
 	
+	private ProcessText process = new ProcessText();
+	
+	public ProcessText getProcess() {
+		return process;
+	}
+
 	public String readInputText() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     	System.out.print("Enter String:");
     	return br.readLine();
 	}
 	
-	public void processText(String inputText, char letter, int wordLength, ProcessText process) {
+	public void processText(String inputText, char letter, int wordLength) {
 		String pattern = "[^\\.!?]+[\\.!?]";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(inputText);

@@ -5,14 +5,14 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) {
-		ProcessText process = new ProcessText();
 		StringProcessor processor = new StringProcessor();
 		try {
-			processor.processText(processor.readInputText(), 'i', 4, process);
+			processor.processText(processor.readInputText(), 'i', 4);
 		} catch (IOException e) {
 			System.out.println("You don't enter text we need!");
 		}
-		processor.showResult(process.getWordsResult(), process.getQuestionResult());
+		processor.showResult(processor.getProcess().getWordsResult(), 
+								processor.getProcess().getQuestionResult());
 	}
 
 }
