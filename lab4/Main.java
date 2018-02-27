@@ -11,8 +11,7 @@ public class Main {
 		} catch (IOException e) {
 			System.out.println("You don't enter text we need!");
 		}
-		processor.showResult(processor.getProcess().getWordsResult(), 
-								processor.getProcess().getQuestionResult());
+		processor.showResult(processor.getProcess().getWordsResult(), processor.getProcess().getQuestionResult());
 	}
 
 }
