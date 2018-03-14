@@ -12,4 +12,12 @@ public class Hoover extends HouseDevice {
         return cType;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Clean Type";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+cType;
+    }
+
 }

@@ -19,4 +19,12 @@ public class Dishwasher extends HouseDevice {
         return waterVolumsPerTimes;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Dishes Couples Number,Water Volums Per Times";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+dishesCouplesNumber+","+waterVolumsPerTimes;
+    }
+
 }

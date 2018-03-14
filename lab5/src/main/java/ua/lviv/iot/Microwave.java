@@ -20,4 +20,12 @@ public class Microwave extends HouseDevice {
         return grillAvailable;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Volume,Grill Available";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+volume+","+grillAvailable;
+    }
+
 }

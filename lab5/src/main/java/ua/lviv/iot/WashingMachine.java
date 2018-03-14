@@ -20,4 +20,12 @@ public class WashingMachine extends HouseDevice {
         return maxWeightLoad;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Depth,Max Weight Load";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+depth+","+maxWeightLoad;
+    }
+
 }

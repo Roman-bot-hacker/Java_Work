@@ -19,4 +19,12 @@ public class ElectricStove extends HouseDevice {
         return isOvenAvailable;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Cooking Pane ls Number,Is Oven Available";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+cookingPanelsNumber+","+isOvenAvailable;
+    }
+
 }

@@ -12,4 +12,12 @@ public class HairDrier extends HouseDevice {
         return speedNumber;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Speed Number";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+speedNumber;
+    }
+
 }

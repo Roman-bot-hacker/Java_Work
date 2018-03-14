@@ -29,4 +29,12 @@ public class Refrigerator extends HouseDevice {
     public final boolean isFreezerAvailable() {
         return freezerAvailable;
     }
+
+    public final String getHeaders() {
+        return super.getHeaders()+",Fridge Volume,Is Freezer Available,Freezer Volume";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+fridgeVolume+","+freezerAvailable+","+freezerVolume;
+    }
 }

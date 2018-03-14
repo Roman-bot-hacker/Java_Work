@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,6 +35,8 @@ class HouseManagerTest {
     private static final HouseDevice refrigerator = new Refrigerator("MRCOLD", "Samsung",
             810, 25.6, 0.0, false);
     private static final HouseManager houseManager = new HouseManager();
+    private static final HouseDeviceWriter writer = new HouseDeviceWriter();
+    private static final File file = new File("D:\\programs\\houseDevicesList.csv");
     private List<HouseDevice> testList = new LinkedList<>();
 
     @BeforeAll
@@ -108,5 +111,11 @@ class HouseManagerTest {
         assertEquals(air, testList.get(9));
         assertEquals(stove, testList.get(10));
         assertEquals(hoover, testList.get(11));
+    }
+
+    @Test
+    void writeToFileTest() {
+        writer.writeToFile(houseManager.getHouseDeviceList());
+        assertEquals(true, file.exists());
     }
 }

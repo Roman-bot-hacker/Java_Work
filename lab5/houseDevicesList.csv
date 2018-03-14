@@ -1,0 +1,37 @@
+Name,Type,Producer,Power,Is Switched,Clean Type
+H123,HOOVER,LG,1501,false,DRY
+
+Name,Type,Producer,Power,Is Switched,Sole Type,Steamer Available
+ERY19,IRON,Samsung,251,false,CERAMICS,false
+
+Name,Type,Producer,Power,Is Switched,Diagonal,Is Smart Tv Available,Is TV Plasma
+SmartHD,TV,LG,780,false,32.0,true,true
+
+Name,Type,Producer,Power,Is Switched,Volume,Grill Available
+Hot007,MICROWAVE,LG,860,false,26.5,false
+
+Name,Type,Producer,Power,Is SwitchedCold Producity
+WinterIsComing,AIRCONDITINING,Bakura,890,false,2.4
+
+Name,Type,Producer,Power,Is Switched,Dishes Couples Number,Water Volums Per Times
+Bock11,DISHWASHER,Bosch,450,false,9,3.4
+
+Name,Type,Producer,Power,Is Switched,Volume
+Tae21,ELECTRICKETTLE,Bosch,610,false,2.5
+
+Name,Type,Producer,Power,Is Switched,Cooking Pane ls Number,Is Oven Available
+Folk777,ELECTRICSTOVE,Piramida,920,false,4,true
+
+Name,Type,Producer,Power,Is Switched,Speed Number
+Wind,HAIRDRIER,LG,115,false,3
+
+Name,Type,Producer,Power,Is Switched,Volume,Program's Number
+BestFood,MULTITOOL,Piramida,690,false,5.0,14
+
+Name,Type,Producer,Power,Is Switched,Fridge Volume,Is Freezer Available,Freezer Volume
+MRCOLD,REFRIGERATOR,Samsung,810,false,25.6,false,0.0
+
+Name,Type,Producer,Power,Is Switched,Depth,Max Weight Load
+C891,WASHINGMACHINE,LG,540,false,31.5,1000.0
+
+

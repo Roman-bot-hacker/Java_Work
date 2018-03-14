@@ -63,4 +63,12 @@ public abstract class HouseDevice {
         return type + " " + producer + " " + name + " " + power;
     }
 
+    public String getHeaders() {
+        return "Name,Type,Producer,Power,Is Switched";
+    }
+
+    public String toCSV() {
+        return name+","+type+","+producer+","+power+","+isSwitched;
+    }
+
 }

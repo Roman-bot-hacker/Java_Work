@@ -20,4 +20,12 @@ public class Multitool extends HouseDevice {
         return programsNumber;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Volume,Program's Number";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+volume+","+programsNumber;
+    }
+
 }

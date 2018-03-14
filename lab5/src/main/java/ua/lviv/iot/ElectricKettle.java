@@ -12,4 +12,12 @@ public class ElectricKettle extends HouseDevice {
         return volume;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Volume";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+volume;
+    }
+
 }

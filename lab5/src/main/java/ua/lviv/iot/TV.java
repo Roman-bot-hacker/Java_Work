@@ -27,4 +27,12 @@ public class TV extends HouseDevice {
         return tvPlasma;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Diagonal,Is Smart Tv Available,Is TV Plasma";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+diagonal+","+smartTvAvailable+","+tvPlasma;
+    }
+
 }

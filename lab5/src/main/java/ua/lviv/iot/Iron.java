@@ -20,4 +20,12 @@ public class Iron extends HouseDevice {
         return steamerAvailable;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+",Sole Type,Steamer Available";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+sType+","+steamerAvailable;
+    }
+
 }

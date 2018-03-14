@@ -11,4 +11,12 @@ public class AirConditining extends HouseDevice {
         return coldProducity;
     }
 
+    public final String getHeaders() {
+        return super.getHeaders()+"Cold Producity";
+    }
+
+    public final String toCSV() {
+        return super.toCSV()+","+coldProducity;
+    }
+
 }
