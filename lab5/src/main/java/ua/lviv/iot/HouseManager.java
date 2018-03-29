@@ -1,22 +1,23 @@
 package ua.lviv.iot;
-import java.util.LinkedList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HouseManager {
 
-    private List<HouseDevice> houseDeviceList = new LinkedList<>();
+    private static Map<Integer, HouseDevice> houseDeviceMap =new HashMap<>();
 
-    public final List<HouseDevice> getHouseDeviceList() {
-        return houseDeviceList;
+    public final Map<Integer, HouseDevice> getHouseDeviceMap() {
+        return houseDeviceMap;
     }
 
-    public final void addHouseDeviceList(final HouseDevice newDevice) {
-        houseDeviceList.add(newDevice);
+    public final void addHouseDeviceList(final Integer id, final HouseDevice newDevice) {
+        houseDeviceMap.put(id, newDevice);
     }
 
     public final void switchOn(final int devicePosition) {
-       if ((devicePosition<houseDeviceList.size())&&(devicePosition>=0)) {
-            houseDeviceList.get(devicePosition).switchOn();
+       if ((devicePosition< houseDeviceMap.size())&&(devicePosition>=0)) {
+            houseDeviceMap.get(devicePosition).switchOn();
         }
         else {
             System.out.println("List does not have device with this index");
@@ -24,8 +25,8 @@ public class HouseManager {
     }
 
     public final void switchOff(final int devicePosition) {
-        if (devicePosition < houseDeviceList.size()) {
-            houseDeviceList.get(devicePosition).switchOff();
+        if (devicePosition < houseDeviceMap.size()) {
+            houseDeviceMap.get(devicePosition).switchOff();
         } else {
             System.out.println("List does not have device with this index");
         }
@@ -33,28 +34,28 @@ public class HouseManager {
 
     public final int consumerPower() {
         int consumerPower = 0;
-        for (final HouseDevice device: houseDeviceList) {
-            if (device.getSwitched()) {
-                consumerPower += device.getPower();
+        for (Map.Entry<Integer,HouseDevice> houseDevice: houseDeviceMap.entrySet()) {
+            if (houseDevice.getValue().getSwitched()) {
+                consumerPower += houseDevice.getValue().getPower();
             }
         }
         return consumerPower;
     }
 
-    public final List<HouseDevice> searchByProducer(final String producer) {
-        final List<HouseDevice> parameterDevicesList = new LinkedList<>();
-        for (final HouseDevice device: houseDeviceList) {
-            if (device.getProducer().equalsIgnoreCase(producer)) {
-                parameterDevicesList.add(device);
+    public final Map<Integer,HouseDevice> searchByProducer(final String producer) {
+        final Map<Integer,HouseDevice> parameterDevicesList = new HashMap<>();
+        for (Map.Entry<Integer,HouseDevice> houseDevice: houseDeviceMap.entrySet()) {
+            if (houseDevice.getValue().getProducer().equalsIgnoreCase(producer)) {
+                parameterDevicesList.put(houseDevice.getKey(),houseDevice.getValue());
             }
         }
         return parameterDevicesList;
     }
 
-    public final List<HouseDevice> sortByPower(final List<HouseDevice> deviceListToSort) {
-        deviceListToSort.sort((sortDevice1, sortDevice2) -> sortDevice1.getPower() - sortDevice2.getPower());
-        deviceListToSort.forEach((device) -> System.out.println(device));
-        return deviceListToSort;
+    public final List<HouseDevice> sortByPower(final List<HouseDevice> deviceMapToSort) {
+        deviceMapToSort.sort((sortDevice1, sortDevice2) -> sortDevice1.getPower() - sortDevice2.getPower());
+        deviceMapToSort.forEach((device) -> System.out.println(device));
+        return deviceMapToSort;
     }
 
 }

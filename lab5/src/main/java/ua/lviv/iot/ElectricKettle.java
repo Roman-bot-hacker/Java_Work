@@ -3,8 +3,8 @@ public class ElectricKettle extends HouseDevice {
 
     private double volume;
 
-    public ElectricKettle(final String name, final String producer, final int power, final double volume) {
-        super(name, producer, power, DeviceType.ELECTRICKETTLE);
+    public ElectricKettle(final Integer id, final String name, final String producer, final int power, final double volume) {
+        super(id, name, producer, power, DeviceType.ELECTRICKETTLE);
         this.volume = volume;
     }
 

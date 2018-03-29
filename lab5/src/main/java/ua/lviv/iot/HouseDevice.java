@@ -1,6 +1,8 @@
 package ua.lviv.iot;
 public abstract class HouseDevice {
 
+    private Integer id;
+
     private String name;
 
     private DeviceType type;
@@ -11,12 +13,17 @@ public abstract class HouseDevice {
 
     private boolean isSwitched = false;
 
-    public HouseDevice(final String name, final String producer, final int power, final DeviceType deviceType) {
+    public HouseDevice() {
+
+    }
+
+    public HouseDevice(final Integer id, final String name, final String producer, final int power, final DeviceType deviceType) {
         super();
         this.name = name;
         type = deviceType;
         this.producer = producer;
         this.power = power;
+        this.id = id;
     }
 
     public final DeviceType getType() {
@@ -70,5 +77,7 @@ public abstract class HouseDevice {
     public String toCSV() {
         return name+","+type+","+producer+","+power+","+isSwitched;
     }
+
+    public Integer getId() {return id;}
 
 }

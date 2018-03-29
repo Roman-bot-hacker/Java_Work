@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HouseDeviceTest {
 
-    private HouseDevice houseDevice = new TV("Name", "Producer", 1500, 32,
+    private HouseDevice houseDevice = new TV(13,"Name", "Producer", 1500, 32,
                                                 true, true);
 
     @Test

@@ -2,8 +2,8 @@ package ua.lviv.iot;
 public class AirConditining extends HouseDevice {
     private double coldProducity;
 
-    public AirConditining(final String name, final String producer, final int power, final double coldProducity) {
-        super(name, producer, power, DeviceType.AIRCONDITINING);
+    public AirConditining(final Integer id, final String name, final String producer, final int power, final double coldProducity) {
+        super(id, name, producer, power, DeviceType.AIRCONDITINING);
         this.coldProducity = coldProducity;
     }
 

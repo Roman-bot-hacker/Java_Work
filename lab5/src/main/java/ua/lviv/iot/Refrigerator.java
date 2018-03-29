@@ -6,9 +6,9 @@ public class Refrigerator extends HouseDevice {
 
     private boolean freezerAvailable;
 
-    public Refrigerator(final String name, final String producer, final int power, final double fridgeVolume,
+    public Refrigerator(final Integer id, final String name, final String producer, final int power, final double fridgeVolume,
                         final double freezerVolume, final boolean isFreezerAvailable) {
-        super(name, producer, power, DeviceType.REFRIGERATOR);
+        super(id, name, producer, power, DeviceType.REFRIGERATOR);
         this.fridgeVolume = fridgeVolume;
         this.freezerVolume = freezerVolume;
         this.freezerAvailable = isFreezerAvailable;

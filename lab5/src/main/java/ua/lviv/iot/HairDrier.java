@@ -3,8 +3,8 @@ public class HairDrier extends HouseDevice {
 
     private int speedNumber;
 
-    public HairDrier(final String name, final String producer, final int power, final int speedNumber) {
-        super(name, producer, power, DeviceType.HAIRDRIER);
+    public HairDrier(final Integer id, final String name, final String producer, final int power, final int speedNumber) {
+        super(id, name, producer, power, DeviceType.HAIRDRIER);
         this.speedNumber = speedNumber;
     }
 

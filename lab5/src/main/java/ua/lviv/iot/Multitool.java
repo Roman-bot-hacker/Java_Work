@@ -5,9 +5,9 @@ public class Multitool extends HouseDevice {
 
     private int programsNumber;
 
-    public Multitool(final String name, final String producer, final int power, final double volume,
+    public Multitool(final Integer id, final String name, final String producer, final int power, final double volume,
                      final int programsNumber) {
-        super(name, producer, power, DeviceType.MULTITOOL);
+        super(id, name, producer, power, DeviceType.MULTITOOL);
         this.volume = volume;
         this.programsNumber = programsNumber;
     }

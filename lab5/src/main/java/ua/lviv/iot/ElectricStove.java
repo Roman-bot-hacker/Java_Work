@@ -5,8 +5,8 @@ public class ElectricStove extends HouseDevice {
 
     private boolean isOvenAvailable;
 
-    public ElectricStove(final String name, final String producer, final int power, final int cookingPanelsNumber, final boolean isOvenAvailable) {
-        super(name, producer, power, DeviceType.ELECTRICSTOVE);
+    public ElectricStove(final Integer id, final String name, final String producer, final int power, final int cookingPanelsNumber, final boolean isOvenAvailable) {
+        super(id, name, producer, power, DeviceType.ELECTRICSTOVE);
         this.cookingPanelsNumber = cookingPanelsNumber;
         this.isOvenAvailable = isOvenAvailable;
     }

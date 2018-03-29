@@ -7,9 +7,9 @@ public class TV extends HouseDevice {
 
     private boolean tvPlasma;
 
-    public TV(final String name, final String producer, final int power, final double diagonal,
+    public TV(final Integer id, final String name, final String producer, final int power, final double diagonal,
               final boolean isSmartTvAvailable, final boolean isTvPlasma) {
-        super(name, producer, power, DeviceType.TV);
+        super(id, name, producer, power, DeviceType.TV);
         this.diagonal = diagonal;
         this.smartTvAvailable = isSmartTvAvailable;
         this.tvPlasma = isTvPlasma;

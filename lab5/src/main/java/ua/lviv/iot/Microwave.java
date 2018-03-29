@@ -5,9 +5,9 @@ public class Microwave extends HouseDevice {
 
     private boolean grillAvailable;
 
-    public Microwave(final String name, final String producer, final int power, final double volume,
+    public Microwave(final Integer id, final String name, final String producer, final int power, final double volume,
                      final boolean isGrillAvailable) {
-        super(name, producer, power, DeviceType.MICROWAVE);
+        super(id, name, producer, power, DeviceType.MICROWAVE);
         this.volume = volume;
         this.grillAvailable = isGrillAvailable;
     }

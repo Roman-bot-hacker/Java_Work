@@ -3,8 +3,8 @@ public class Hoover extends HouseDevice {
 
     private CleanType cType;
 
-    public Hoover(final String name, final String producer, final int power, final CleanType cType) {
-        super(name, producer, power, DeviceType.HOOVER);
+    public Hoover(final Integer id, final String name, final String producer, final int power, final CleanType cType) {
+        super(id, name, producer, power, DeviceType.HOOVER);
         this.cType = cType;
     }
 

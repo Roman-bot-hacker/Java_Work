@@ -5,9 +5,9 @@ public class WashingMachine extends HouseDevice {
 
     private double maxWeightLoad;
 
-    public WashingMachine(final String name, final String producer, final int power, final double depth,
+    public WashingMachine(final Integer id, final String name, final String producer, final int power, final double depth,
                           final double maxWeightLoad) {
-        super(name, producer, power, DeviceType.WASHINGMACHINE);
+        super(id, name, producer, power, DeviceType.WASHINGMACHINE);
         this.depth = depth;
         this.maxWeightLoad = maxWeightLoad;
     }
