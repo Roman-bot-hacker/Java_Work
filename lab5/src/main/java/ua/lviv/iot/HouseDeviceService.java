@@ -1,6 +1,8 @@
 package ua.lviv.iot;
 
 
+import org.glassfish.jersey.internal.inject.Custom;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -24,9 +26,9 @@ public class HouseDeviceService {
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public final Response createHouseDevice(@PathParam("id") Integer id,
-                                      HouseDevice houseDevice) {
-        houseDeviceMap.put(id, houseDeviceObj);
+    public final Response createHouseDevice(@PathParam("id") Integer id, HouseDevice houseDevice) {
+        //houseDeviceMap.put(id, houseDeviceObj);
+        houseDeviceMap.put(houseDevice.getId(), houseDevice);
         return Response.status(200).entity("Good").build();
     }
 
@@ -41,8 +43,9 @@ public class HouseDeviceService {
     @POST
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public final Response updateFruit(@PathParam("id") Integer id) {
-        houseDeviceMap.put(id, getHouseDeviceObj2);
+    public final Response updateFruit(@PathParam("id") Integer id, HouseDevice houseDevice) {
+        //houseDeviceMap.put(id, getHouseDeviceObj2);
+        houseDeviceMap.put(id, houseDevice);
         return Response.status(200).entity("Good").build();
     }
 }

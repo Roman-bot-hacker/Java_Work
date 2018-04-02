@@ -1,5 +1,5 @@
 package ua.lviv.iot;
-public abstract class HouseDevice {
+public class HouseDevice {
 
     private Integer id;
 
