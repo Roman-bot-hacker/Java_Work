@@ -35,7 +35,7 @@ public class HouseDeviceService {
     @DELETE
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public final Response deleteFruit(@PathParam("id") Integer id) {
+    public final Response deleteHouseDevice(@PathParam("id") Integer id) {
         houseDeviceMap.remove(id);
         return Response.status(200).entity("Good").build();
     }
@@ -43,7 +43,7 @@ public class HouseDeviceService {
     @POST
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public final Response updateFruit(@PathParam("id") Integer id, HouseDevice houseDevice) {
+    public final Response updateHouseDevice(@PathParam("id") Integer id, HouseDevice houseDevice) {
         //houseDeviceMap.put(id, getHouseDeviceObj2);
         houseDeviceMap.put(id, houseDevice);
         return Response.status(200).entity("Good").build();
