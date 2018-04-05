@@ -24,9 +24,8 @@ public class HouseDeviceService {
     }
 
     @PUT
-    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public final Response createHouseDevice(@PathParam("id") Integer id, HouseDevice houseDevice) {
+    public final Response createHouseDevice(HouseDevice houseDevice) {
         //houseDeviceMap.put(id, houseDeviceObj);
         houseDeviceMap.put(houseDevice.getId(), houseDevice);
         return Response.status(200).entity("Good").build();

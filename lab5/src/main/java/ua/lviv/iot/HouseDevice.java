@@ -1,4 +1,5 @@
 package ua.lviv.iot;
+
 public class HouseDevice {
 
     private Integer id;
@@ -75,9 +76,14 @@ public class HouseDevice {
     }
 
     public String toCSV() {
-        return name+","+type+","+producer+","+power+","+isSwitched;
+        return name + "," + type + "," + producer + "," + power + "," + isSwitched;
     }
 
-    public Integer getId() {return id;}
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
