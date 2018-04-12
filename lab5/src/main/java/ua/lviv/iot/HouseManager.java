@@ -1,18 +1,45 @@
 package ua.lviv.iot;
+import ua.lviv.iot.persistence.dao.HouseDeviceDao;
+
+import javax.enterprise.context.Dependent;
+import javax.inject.Inject;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HouseManager {
+@Dependent
+public class HouseManager implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Inject
+    public HouseDeviceDao houseDeviceDao;
 
     private static Map<Integer, HouseDevice> houseDeviceMap =new HashMap<>();
+
+    public HouseManager() {
+
+    }
 
     public final Map<Integer, HouseDevice> getHouseDeviceMap() {
         return houseDeviceMap;
     }
 
-    public final void addHouseDeviceList(final Integer id, final HouseDevice newDevice) {
-        houseDeviceMap.put(id, newDevice);
+    public HouseDevice getHouseDevice(Integer id) {
+         return houseDeviceDao.findById(id);
+    }
+
+    public void addHouseDevice(HouseDevice device) {
+        houseDeviceDao.persist(device);
+    }
+
+    public  void updateHouseDevice(HouseDevice device) {
+        houseDeviceDao.update(device);
+    }
+
+    public  void deleteHouseDevice(Integer id) {
+        houseDeviceDao.delete(id);
     }
 
     public final void switchOn(final int devicePosition) {

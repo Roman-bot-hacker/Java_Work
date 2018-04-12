@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HouseManagerTest {
 
-    private static final HouseDevice hoover = new Hoover(1,"H123", "LG", 1501, CleanType.DRY);
+    /*private static final HouseDevice hoover = new Hoover(1,"H123", "LG", 1501, CleanType.DRY);
     private static final HouseDevice iron = new Iron(2,"ERY19", "Samsung", 251, SoleType.CERAMICS,
             false);
     private static final HouseDevice tv = new TV(3,"SmartHD", "LG", 780, 32.0,
@@ -36,7 +36,7 @@ class HouseManagerTest {
     private static final HouseDevice refrigerator = new Refrigerator(12,"MRCOLD", "Samsung",
             810, 25.6, 0.0, false);
 
-    private static final HouseManager houseManager = new HouseManager();
+    private static final HouseManager houseManager = new HouseManager(houseDeviceDao);
     private static final HouseDeviceWriter writer = new HouseDeviceWriter();
     private static final File file = new File("D:\\programs\\houseDevicesList.csv");
     private Map<Integer,HouseDevice> testMap = new HashMap<>();
@@ -126,7 +126,7 @@ class HouseManagerTest {
             assertTrue(false);
         }
         assertEquals(true, file.exists());
-        */
-    }
+
+    }*/
 
 }

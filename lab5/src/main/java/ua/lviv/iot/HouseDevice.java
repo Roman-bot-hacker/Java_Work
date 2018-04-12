@@ -1,17 +1,28 @@
 package ua.lviv.iot;
 
+import javax.persistence.*;
+
+@Entity
 public class HouseDevice {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "house_device_id")
     private Integer id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "type")
     private DeviceType type;
 
+    @Column(name = "producer")
     private String producer;
 
+    @Column(name = "power")
     private Integer power;
 
+    @Column(name = "is_switched")
     private boolean isSwitched = false;
 
     public HouseDevice() {
