@@ -9,7 +9,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/MySqlDS</jta-data-source>
 
-        <class>ua.lviv.iot.model.Student</class>
+        <class>ua.lviv.iot.HouseDevice</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
 
 

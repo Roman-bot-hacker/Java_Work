@@ -1,6 +1,7 @@
 package ua.lviv.iot;
 
 import javax.inject.Inject;
+import javax.persistence.Id;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
