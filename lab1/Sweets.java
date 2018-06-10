@@ -2,13 +2,13 @@
 public class Sweets {
 
 	// Weight of sweets, which is available for a shop by default
-	private static final double DEF_WEIGHT = 1.0;
+	private static final double _DEFAULT_SWEETS_WEIGHT = 1.0;
 
 	// Price per 1 KG of sweets by default
-	private static final double DEF_PRICE = 100.0;
+	private static final double _DEFAULT_SWEETS_PRICE = 100.0;
 
 	// Number of sweets per 1 KG by default
-	private static final int DEF_NUMBER = 50;
+	private static final int _DEFAULT_SWEETS_COUNT_PER_KG = 50;
 
 	// Summary price of sweets
 	private static double sumPrice = 0;
@@ -24,11 +24,11 @@ public class Sweets {
 	private String producer;
 
 	public Sweets() {
-		numberByKg = DEF_NUMBER;
+		numberByKg = _DEFAULT_SWEETS_COUNT_PER_KG;
 		name = "Name";
-		priceByKg = DEF_PRICE;
+		priceByKg = _DEFAULT_SWEETS_PRICE;
 		producer = "Producer";
-		availiableWeight = DEF_WEIGHT;
+		availiableWeight = _DEFAULT_SWEETS_WEIGHT;
 		sumPrice += (priceByKg * availiableWeight);
 	}
 
@@ -37,7 +37,7 @@ public class Sweets {
 		this.name = name;
 		this.priceByKg = priceByKg;
 		this.producer = producer;
-		availiableWeight = DEF_WEIGHT;
+		availiableWeight = _DEFAULT_SWEETS_WEIGHT;
 		sumPrice += (priceByKg * availiableWeight);
 	}
 
